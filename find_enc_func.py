@@ -29,9 +29,9 @@ if __name__ == "__main__":
     for func in idautils.Functions():
         if not "sub" in GetFunctionName(func):
             continue
-    
+
         dism_addr = list(FuncItems(func))
         check_operand_count(dism_addr)
         check_encode_by_xor(dism_addr)
 
-print "[*] Done"
+    print "[*] Done"
